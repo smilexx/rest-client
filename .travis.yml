@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "8"
+  - "10"
+  - "12"
+
+# https://docs.travis-ci.com/user/gui-and-headless-browsers/#using-xvfb-to-run-tests-that-require-a-gui
+dist: xenial
+
+services:
+  - xvfb
+
+addons:
+  chrome: stable
+
+script:
+  - yarn
